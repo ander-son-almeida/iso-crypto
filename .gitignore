@@ -1,1 +1,3 @@
-dataset_crypto
+*.npy
+*.csv
+*.png
