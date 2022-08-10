@@ -1,4 +1,7 @@
-Outras Versoes
-*.npy
-*.csv
-*.png
+Outras_versoes
+#*.npy
+#*.csv
+#*.png
+**/*.npy
+**/*.csv
+**/*.png
