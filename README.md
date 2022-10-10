@@ -1,6 +1,6 @@
 # About
 
-The Project IsoAction was inspired by statistical tools applied in the data mining of astrophysics data. The main references were theoretical curves adjusted in open clusters intending to understand the fundamental parameters that make its stars – these curves are called isochrones.
+The Project IsoCrypto was inspired by statistical tools applied in the data mining of astrophysics data. The main references were theoretical curves adjusted in open clusters intending to understand the fundamental parameters that make its stars – these curves are called isochrones.
 
 Given such use in astrophysics, this project aims to amplify the applications of those curves in econophysics. The goal is to analyze temporal series of financial data in real-time, verifying if those stochastic events are similar to others that occurred in the past (a search for patterns), and through that, to predict the price of assets to make decisions.
 
