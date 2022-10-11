@@ -18,12 +18,12 @@ symbol = "BTCUSDT" #BTCUSDT ETHUSDT
 interval= '1m'
 
 diretorio = r'S:\Área de Trabalho\IsoActions\crypto'
-api_key = 'avnQD2XcghBpIkd5Y3R8PdGsKqwAbWu5A3thoNz56CpbNPIuqJ01y0MBHtCpsALc' 
-api_secret = 'cuG1WT5rtA0y6O8bx8T29BQBdV1DvLRb6yIN78HpU3C5LMLtGstVVC78RuPFyZnm'
+api_key = '???' 
+api_secret = '????
 client = Client(api_key, api_secret)
 
 
-# lendo o dataset completo já criado
+# read dataset to update
 data_set = np.load(diretorio + r'\dataset_crypto\data_set_crypto_{}.npy'.format(symbol),
                    allow_pickle=True)
 
@@ -55,41 +55,5 @@ data_update = data_update.to_records()
 update = np.concatenate((data_set, data_update), axis=0)
 
 
-
 #salvando
 np.save(diretorio + r'\dataset_crypto\data_set_crypto_{}.npy'.format(symbol),update)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
