@@ -24,8 +24,6 @@ Under development and improvement, mainly the backtest tool and the creation of 
 
 To perform predict adjustments, initially, a dataset must be created, this dataset must be created only once and updated using the "update_dataset".
 
-To perform forecast adjustments, initially a dataset must be created, this dataset must be created only once and updated using the "update_dataset" file.
-
 Two options are available for tracking forecasts:
 
 - The "predict" file when executed displays its results through matplotlib. In this option, a .png file is saved when the R² is greater than 0.80.
