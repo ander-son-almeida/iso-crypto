@@ -19,7 +19,7 @@ interval= '1m'
 
 diretorio = r'S:\Área de Trabalho\IsoActions\crypto'
 api_key = '???' 
-api_secret = '????
+api_secret = '????'
 client = Client(api_key, api_secret)
 
 
