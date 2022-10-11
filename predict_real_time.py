@@ -219,27 +219,3 @@ while True:
         st.write('Horário inicial do ajuste: {}'.format(data_time_start))
         st.write('Horário final do ajuste: {}'.format(data_time_end))
         st.write('Horário final da previsão: {}'.format(data_time_prediction[-1]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
