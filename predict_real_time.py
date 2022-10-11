@@ -10,10 +10,12 @@ import datetime as dt
 from datetime import timedelta
 from datetime import datetime
 import numpy as np
-from binance.client import Client
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
+from binance.client import Client
+
+from config.BinanceClient import BinanceClient
 
 
 st.set_page_config(
@@ -34,9 +36,7 @@ target_size = 100 # number of target lines
 condicao = 0.8
 count = 0
 
-# enter binance API key 
-api_key = '?????' 
-api_secret = '????'
+client = BinanceClient.getClient()
 
 data_set = np.load(directory + r'\dataset_crypto\data_set_crypto_{}.npy'.format(symbol),
                    allow_pickle=True)
@@ -61,10 +61,7 @@ pd.options.plotting.backend = "plotly"
 while True:    
     
     ###############################################################################
-    # target triggering API binance
-    
-    client = Client(api_key, api_secret)
-    
+    # target triggering API binance  
     
     interval= '{}m'.format(interval_target) 
     klines = client.get_historical_klines(symbol, 

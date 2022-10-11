@@ -7,20 +7,16 @@ Created on Mon Aug  1 14:51:32 2022
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import datetime
 import numpy as np
-from binance.client import Client
 import datetime as dt
+from config.BinanceClient import BinanceClient
 
 
 symbol = "BTCUSDT"
 interval= '1m'
 media_movel = 5
 
-# enter binance API key 
-api_key = '?????' 
-api_secret = '????'
-client = Client(api_key, api_secret)
+client = BinanceClient.getClient()
 
 ###############################################################################
 # read CSV from predtc

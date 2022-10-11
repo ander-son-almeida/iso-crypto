@@ -12,7 +12,7 @@ import datetime as dt
 from datetime import timedelta
 from datetime import datetime
 import numpy as np
-from binance.client import Client
+from config.BinanceClient import BinanceClient
 
 directory = r'S:\Área de Trabalho\IsoActions\crypto'
 
@@ -24,15 +24,11 @@ target_size = 100 # number of target lines
 condicao = 0.8
 count = 0
 
-# enter binance API key 
-api_key = '?????' 
-api_secret = '????'
-
 data_set = np.load(directory + r'\dataset_crypto\data_set_crypto_{}.npy'.format(symbol),
                    allow_pickle=True)
 
 
-def crypto(symbol, interval_target, media_movel, data_set, condicao, count, api_key, api_secret):
+def crypto(symbol, interval_target, media_movel, data_set, condicao, client):
     
     try:
         
@@ -49,9 +45,6 @@ def crypto(symbol, interval_target, media_movel, data_set, condicao, count, api_
         
         ###############################################################################
         # target triggering API binance
-
-        client = Client(api_key, api_secret)
-        
         
         interval= '{}m'.format(interval_target) 
         klines = client.get_historical_klines(symbol, 
@@ -212,13 +205,13 @@ def crypto(symbol, interval_target, media_movel, data_set, condicao, count, api_
 
 
 while True:
+    client = BinanceClient.getClient()
     
     try:
         count = count + 1
         (r2, data_time_end, number_isoch, 
           data_time_start, data_time_prediction) = crypto(symbol, interval_target, media_movel,
-                                                          data_set, condicao, count, 
-                                                          api_key, api_secret)
+                                                          data_set, condicao, client)
         print('\n Ciclo', count, 'de ajuste')
         print('\n Horário inicial do ajuste:', data_time_start)
         print('\n Horário final do ajuste:', data_time_end)

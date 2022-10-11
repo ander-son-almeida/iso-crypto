@@ -6,21 +6,25 @@ Created on Mon Jun 27 19:39:58 2022
 """
 
 import pandas as pd
-from binance.client import Client
 import datetime
 from datetime import timedelta
 from datetime import datetime
 import datetime as dt
 import numpy as np
+from config.BinanceClient import BinanceClient
 
 
 symbol = "BTCUSDT" #BTCUSDT ETHUSDT
 interval= '1m'
 
 diretorio = r'S:\Área de Trabalho\IsoActions\crypto'
+<<<<<<< Updated upstream
 api_key = '???' 
 api_secret = '????'
 client = Client(api_key, api_secret)
+=======
+client = BinanceClient.getClient()
+>>>>>>> Stashed changes
 
 
 # read dataset to update

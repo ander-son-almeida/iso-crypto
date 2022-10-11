@@ -6,20 +6,24 @@ Created on Mon Jun 27 19:39:58 2022
 """
 
 import pandas as pd
-from binance.client import Client
 import datetime as dt
 import numpy as np
+from config.BinanceClient import BinanceClient
 
+<<<<<<< Updated upstream
 media_movel = 14
 
 # enter binance API key 
 api_key = '?????' 
 api_secret = '????'
 client = Client(api_key, api_secret)
+=======
+client = BinanceClient.getClient()
+>>>>>>> Stashed changes
 
 symbol = "BTCUSDT"
 interval= '1m'
-Client.KLINE_INTERVAL_5MINUTE 
+client.KLINE_INTERVAL_5MINUTE 
 klines = client.get_historical_klines(symbol, interval, "1 Jan, 2020", "22 Jul, 2022") # choose dataset size!
 data = pd.DataFrame(klines)
 
