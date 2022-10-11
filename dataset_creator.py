@@ -10,7 +10,6 @@ from binance.client import Client
 import datetime as dt
 import numpy as np
 
-
 media_movel = 14
 
 # enter binance API key 
