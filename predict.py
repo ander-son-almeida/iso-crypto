@@ -228,25 +228,4 @@ while True:
         print('*'*50)
     except:
         print('Loop failure!')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
